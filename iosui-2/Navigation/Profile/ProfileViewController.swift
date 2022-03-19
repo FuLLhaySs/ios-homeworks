@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             profileHeaderView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
             profileHeaderView.widthAnchor.constraint(equalTo: self.view.widthAnchor),
             profileHeaderView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            profileHeaderView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
+            profileHeaderView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -220)
         ])
     }
     
@@ -49,4 +49,3 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
-

@@ -27,12 +27,12 @@ class InfoViewController: UIViewController {
         
         view.backgroundColor = .white
         view.addSubview(alertButton)
-        
-        alertButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
-        alertButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        alertButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        alertButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-
+        NSLayoutConstraint.activate([
+        alertButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+        alertButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+        alertButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+        alertButton.heightAnchor.constraint(equalToConstant: 50)
+])
     }
     
     @objc private func showAlert() {
