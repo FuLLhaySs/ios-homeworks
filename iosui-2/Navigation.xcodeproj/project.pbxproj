@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39691D9227E14C390056ABA9 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39691D9127E14C390056ABA9 /* ProfileHeaderView.swift */; };
 		BDFD997F27BE5DA400FD2C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD997E27BE5DA400FD2C23 /* AppDelegate.swift */; };
 		BDFD998127BE5DA400FD2C23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD998027BE5DA400FD2C23 /* SceneDelegate.swift */; };
 		BDFD998827BE5DA500FD2C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDFD998727BE5DA500FD2C23 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39691D9127E14C390056ABA9 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		BDFD997B27BE5DA400FD2C23 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD997E27BE5DA400FD2C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDFD998027BE5DA400FD2C23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39691D9027E14C020056ABA9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD999627BE65C900FD2C23 /* ProfileViewController.swift */,
+				39691D9127E14C390056ABA9 /* ProfileHeaderView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		BDFD997227BE5DA400FD2C23 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +75,7 @@
 		BDFD997D27BE5DA400FD2C23 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				39691D9027E14C020056ABA9 /* Profile */,
 				BDFD997E27BE5DA400FD2C23 /* AppDelegate.swift */,
 				BDFD998027BE5DA400FD2C23 /* SceneDelegate.swift */,
 				BDFD999A27BE7AC500FD2C23 /* Post.swift */,
@@ -82,7 +94,6 @@
 				BDFD999D27BE7F3200FD2C23 /* InfoViewController.swift */,
 				BDFD999427BE65B000FD2C23 /* FeedViewController.swift */,
 				BDFD999827BE66A800FD2C23 /* PostViewController.swift */,
-				BDFD999627BE65C900FD2C23 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +172,7 @@
 				BDFD999927BE66A800FD2C23 /* PostViewController.swift in Sources */,
 				BDFD999B27BE7AC500FD2C23 /* Post.swift in Sources */,
 				BDFD999327BE613E00FD2C23 /* TabBarController.swift in Sources */,
+				39691D9227E14C390056ABA9 /* ProfileHeaderView.swift in Sources */,
 				BDFD999527BE65B000FD2C23 /* FeedViewController.swift in Sources */,
 				BDFD997F27BE5DA400FD2C23 /* AppDelegate.swift in Sources */,
 				BDFD999E27BE7F3200FD2C23 /* InfoViewController.swift in Sources */,
