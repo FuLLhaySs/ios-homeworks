@@ -39,13 +39,4 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    func hideKeyboard() {
-        profileHeaderView.statusTextField.resignFirstResponder()
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        hideKeyboard()
-        return true
-    }
-    
 }
