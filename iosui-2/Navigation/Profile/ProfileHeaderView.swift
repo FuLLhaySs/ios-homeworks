@@ -130,7 +130,14 @@ class ProfileHeaderView: UIView {
         ])
     }
     
+    func hideKeyboard() {
+        self.statusTextField.resignFirstResponder()
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        return true
+    }
     
     @objc func statusTextChanged() {
         statusLabel.text = statusTextField.text
