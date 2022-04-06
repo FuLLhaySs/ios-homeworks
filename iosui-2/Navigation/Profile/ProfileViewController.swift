@@ -13,9 +13,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addSubview(profileHeaderView)
-        profileHeaderView.statusTextField.delegate = self
 
     }
     
