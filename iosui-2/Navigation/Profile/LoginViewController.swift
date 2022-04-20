@@ -13,6 +13,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.backgroundColor = .white
+        scrollView.isScrollEnabled = true
         return scrollView
     }()
     
@@ -23,12 +24,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         return contentView
         }()
     
+    // Логотип ВК
     private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "logo"))
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
     
     private lazy var loginPasswordView: UIStackView = {
         let stackView = UIStackView()
@@ -43,6 +46,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         return stackView
     }()
     
+    // Текстфилд логина
     private lazy var loginTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -58,6 +62,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         return textField
     }()
     
+    // Текстфилд пароля
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -74,6 +79,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         return textField
     }()
     
+    //кнопка авторизации
     private lazy var logInButton: UIButton = {
         let button = UIButton()
         button.setTitle("Log In", for: .normal)
@@ -120,16 +126,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
 
-            logoImageView.topAnchor.constraint(lessThanOrEqualTo: contentView.topAnchor, constant: 120),
             logoImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             logoImageView.widthAnchor.constraint(equalToConstant: 100),
             logoImageView.heightAnchor.constraint(equalToConstant: 100),
-            logoImageView.bottomAnchor.constraint(greaterThanOrEqualTo: loginPasswordView.topAnchor, constant: -70),
+            logoImageView.topAnchor.constraint(equalTo: loginPasswordView.topAnchor, constant: -210),
+            logoImageView.widthAnchor.constraint(equalToConstant: 100),
+          
             
             loginPasswordView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             loginPasswordView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             loginPasswordView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            loginPasswordView.heightAnchor.constraint(equalToConstant: 100),
+            loginPasswordView.heightAnchor.constraint(equalToConstant: 90),
             
             
             logInButton.topAnchor.constraint(equalTo: loginPasswordView.bottomAnchor, constant: 16),
