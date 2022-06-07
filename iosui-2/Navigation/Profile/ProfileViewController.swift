@@ -8,7 +8,14 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
+    struct Post {
+        let author: String
+        let description: String
+        let image: String
+        let likes: Int
+        let views: Int
+    }
     
     private lazy var profileHeaderView: ProfileHeaderView = {
         let view = ProfileHeaderView(frame: .zero)
@@ -26,7 +33,11 @@ class ProfileViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "ArticleCell")
         tableView.backgroundColor = .clear
+        #if DEBUG
+        tableView.backgroundColor = .red
+        #else
         tableView.backgroundColor = .systemGray6
+        #endif
         tableView.layer.borderColor = UIColor.lightGray.cgColor
         tableView.layer.borderWidth = 0.5
         return tableView
@@ -34,7 +45,7 @@ class ProfileViewController: UIViewController {
     
     private lazy var headerHeight: CGFloat = 250
     
-    private lazy var dataSource: [Post] = []
+    public lazy var dataSource: [Post] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
