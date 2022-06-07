@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		391D32C427FE4982007CFD90 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D32C327FE4982007CFD90 /* LoginViewController.swift */; };
 		39691D9227E14C390056ABA9 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39691D9127E14C390056ABA9 /* ProfileHeaderView.swift */; };
 		BDFD997F27BE5DA400FD2C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD997E27BE5DA400FD2C23 /* AppDelegate.swift */; };
 		BDFD998127BE5DA400FD2C23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD998027BE5DA400FD2C23 /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		391D32C327FE4982007CFD90 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		39691D9127E14C390056ABA9 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		BDFD997B27BE5DA400FD2C23 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD997E27BE5DA400FD2C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			children = (
 				BDFD999627BE65C900FD2C23 /* ProfileViewController.swift */,
 				39691D9127E14C390056ABA9 /* ProfileHeaderView.swift */,
+				391D32C327FE4982007CFD90 /* LoginViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -76,11 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				39691D9027E14C020056ABA9 /* Profile */,
+				BDFD999C27BE7EF200FD2C23 /* ViewControllers */,
 				BDFD997E27BE5DA400FD2C23 /* AppDelegate.swift */,
 				BDFD998027BE5DA400FD2C23 /* SceneDelegate.swift */,
 				BDFD999A27BE7AC500FD2C23 /* Post.swift */,
 				BDFD999227BE613E00FD2C23 /* TabBarController.swift */,
-				BDFD999C27BE7EF200FD2C23 /* ViewControllers */,
 				BDFD998727BE5DA500FD2C23 /* Assets.xcassets */,
 				BDFD998927BE5DA500FD2C23 /* LaunchScreen.storyboard */,
 				BDFD998C27BE5DA500FD2C23 /* Info.plist */,
@@ -176,6 +179,7 @@
 				BDFD999527BE65B000FD2C23 /* FeedViewController.swift in Sources */,
 				BDFD997F27BE5DA400FD2C23 /* AppDelegate.swift in Sources */,
 				BDFD999E27BE7F3200FD2C23 /* InfoViewController.swift in Sources */,
+				391D32C427FE4982007CFD90 /* LoginViewController.swift in Sources */,
 				BDFD998127BE5DA400FD2C23 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
