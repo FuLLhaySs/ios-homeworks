@@ -9,34 +9,65 @@ import UIKit
 
 class FeedViewController: UIViewController {
     
-    var postButton: UIButton!
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.spacing = 10
+        return stackView
+    }()
     
-    var post = Post()
+    private lazy var firstButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Первая кнопка", for: .normal)
+        button.backgroundColor = .systemGreen
+        button.layer.cornerRadius = 4
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 4, height: 4)
+        button.layer.shadowRadius = 4
+        button.layer.shadowOpacity = 0.5
+        button.addTarget(self, action: #selector(self.buttonTapped), for: .touchUpInside)
+        return button
+    }()
     
-    override func loadView() {
-        view = UIView()
-        
-        postButton = UIButton()
-        postButton.backgroundColor = .systemCyan
-        postButton.layer.borderWidth = 1
-        postButton.layer.cornerRadius = 5
-        postButton.frame = CGRect(x: 20, y: 200, width: 100, height: 50)
-        postButton.setTitle("Пост", for: .normal)
-        postButton.addTarget(self, action: #selector(showPost), for: .touchUpInside)
-        view.addSubview(postButton)
-        
-
-    }
+    private lazy var secondButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Вторая кнопка", for: .normal)
+        button.backgroundColor = .systemRed
+        button.layer.cornerRadius = 4
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 4, height: 4)
+        button.layer.shadowRadius = 4
+        button.layer.shadowOpacity = 0.5
+        button.addTarget(self, action: #selector(self.buttonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private var post = Post()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        drawSelf()
     }
     
-    @objc func showPost() {
+    private func drawSelf() {
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(firstButton)
+        stackView.addArrangedSubview(secondButton)
+        
+        
+        NSLayoutConstraint.activate([
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            stackView.heightAnchor.constraint(equalToConstant: 110)
+        ])
+    }
+    
+    @objc private func buttonTapped() {
         let postVC = PostViewController()
         postVC.post = post
         self.navigationController?.pushViewController(postVC, animated: true)
     }
-
 }

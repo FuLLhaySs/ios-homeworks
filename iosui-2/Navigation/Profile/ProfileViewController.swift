@@ -13,9 +13,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addSubview(profileHeaderView)
-        profileHeaderView.statusTextField.delegate = self
 
     }
     
@@ -31,7 +29,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             profileHeaderView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
             profileHeaderView.widthAnchor.constraint(equalTo: self.view.widthAnchor),
             profileHeaderView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            profileHeaderView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
+            profileHeaderView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -220)
         ])
     }
     
@@ -39,14 +37,4 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    func hideKeyboard() {
-        profileHeaderView.statusTextField.resignFirstResponder()
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        hideKeyboard()
-        return true
-    }
-    
 }
-

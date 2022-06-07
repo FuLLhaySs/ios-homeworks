@@ -15,7 +15,9 @@ class TabBarController: UITabBarController {
         view.backgroundColor = .systemBackground
         UITabBar.appearance().barTintColor = .systemBackground
         tabBar.tintColor = .label
-        setupVCs()
+        viewControllers = [
+                    createNavController(for: FeedViewController(), title: NSLocalizedString("Лента", comment: ""), image: UIImage(systemName: "house")!),
+                    createNavController(for: ProfileViewController(), title: NSLocalizedString("Профиль", comment: ""), image: UIImage(systemName: "person")!)]
     }
     
     fileprivate func createNavController(for rootViewController: UIViewController,
@@ -28,11 +30,5 @@ class TabBarController: UITabBarController {
         rootViewController.navigationItem.title = title
         return navController
     }
-    
-    func setupVCs() {
-        viewControllers = [
-            createNavController(for: FeedViewController(), title: NSLocalizedString("Лента", comment: ""), image: UIImage(systemName: "house")!),
-            createNavController(for: ProfileViewController(), title: NSLocalizedString("Профиль", comment: ""), image: UIImage(systemName: "person")!)
-        ]
-    }
 }
+
